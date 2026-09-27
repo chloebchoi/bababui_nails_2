@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Jost:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+:root {
+  --blue: #8BA7C7;
+  --navy: #0f3282;
+}
+
+body {
+  color: #0d0d0d;
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  min-height: 100vh;
+  background-color: #c5dcf0;
+  background-image: 
+    radial-gradient(ellipse 50% 40% at 15% 10%, rgba(255, 255, 255, 0.85) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 60% at 80% 20%, rgba(80, 150, 230, 0.9) 0%, transparent 60%),
+    radial-gradient(ellipse 75% 65% at 60% 70%, rgba(15, 50, 130, 0.65) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 20% 75%, rgba(60, 130, 220, 0.8) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 60% at 85% 80%, rgba(15, 50, 130, 0.55) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 30% at 50% 30%, rgba(255, 255, 255, 0.6) 0%, transparent 45%);
+  background-attachment: fixed;
+}
+
+.gradient-home {
+  background-color: #c5dcf0;
+  background-image: 
+    radial-gradient(ellipse 50% 40% at 15% 10%, rgba(255, 255, 255, 0.85) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 60% at 80% 20%, rgba(80, 150, 230, 0.9) 0%, transparent 60%),
+    radial-gradient(ellipse 75% 65% at 60% 70%, rgba(15, 50, 130, 0.65) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 20% 75%, rgba(60, 130, 220, 0.8) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 30% at 50% 30%, rgba(255, 255, 255, 0.6) 0%, transparent 45%);
+  background-attachment: fixed;
+}
+.script {
+  font-family: 'Dancing Script', cursive;
+}
+
+.jost {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+}
+
+.gradient-gallery {
+  background-color: #c8d8ec;
+  background-image: 
+    radial-gradient(ellipse 60% 50% at 0% 0%, rgba(255, 255, 255, 0.7) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 60% at 100% 40%, rgba(80, 150, 230, 0.8) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 40% 100%, rgba(15, 50, 130, 0.5) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 70% 20%, rgba(15, 50, 130, 0.4) 0%, transparent 50%);
+  background-attachment: fixed;
+}
+
+.gradient-pricing {
+  background-color: #c5d5e8;
+  background-image: 
+    radial-gradient(ellipse 60% 70% at 0% 50%, rgba(15, 50, 130, 0.6) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 100% 0%, rgba(255, 255, 255, 0.8) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 60% at 60% 80%, rgba(80, 150, 230, 0.6) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 40% at 30% 20%, rgba(15, 50, 130, 0.4) 0%, transparent 45%);
+  background-attachment: fixed;
+}
+
+.gradient-policy {
+  background-color: #ddeaf7;
+  background-image: 
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(139, 167, 199, 0.8) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 50% at 0% 80%, rgba(255, 255, 255, 0.9) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 60% at 60% 80%, rgba(80, 150, 230, 0.6) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 40% at 30% 20%, rgba(15, 50, 130, 0.4) 0%, transparent 45%),
+    radial-gradient(ellipse 70% 50% at 0% 60%, rgba(80, 150, 230, 0.7) 0%, transparent 60%);
+  background-attachment: fixed;
+}
+
+.gradient-book {
+  background-color: #cddcee;
+  background-image: 
+    radial-gradient(ellipse 50% 80% at 100% 30%, rgba(255, 255, 255, 0.85) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 50% at 0% 60%, rgba(80, 150, 230, 0.7) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 50% 100%, rgba(15, 50, 130, 0.45) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 40% at 40% 10%, rgba(255, 255, 255, 0.6) 0%, transparent 45%);
+  background-attachment: fixed;
+}
