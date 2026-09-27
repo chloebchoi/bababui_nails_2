@@ -4,7 +4,7 @@ import { Resend } from 'resend'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
-const NAIL_TECH_EMAIL = 'bababuinails@gmail.com'
+const NAIL_TECH_EMAIL = process.env.ADMIN_EMAIL!
 
 export async function POST(req: NextRequest) {
   try {
