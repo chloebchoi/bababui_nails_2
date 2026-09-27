@@ -100,7 +100,7 @@ export async function PATCH(req: NextRequest) {
     const { data: booking } = await supabaseAdmin.from('bookings').select('*').eq('id', id).single()
     if (booking) {
       await resend.emails.send({
-        from: 'bababui nails <bookings@bababuinails.com>',
+        from: 'bababui nails <onboarding@resend.dev>',
         to: booking.client_email,
         subject: 'Your appointment is confirmed!',
         html: `

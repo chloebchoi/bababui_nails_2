@@ -24,7 +24,7 @@ export async function GET(req: NextRequest) {
       .eq('id', id)
 
     await resend.emails.send({
-      from: 'bababui nails <bookings@bababuinails.com>',
+      from: 'bababui nails <onboarding@resend.dev>',
       to: client_email,
       subject: 'Your reschedule has been confirmed!',
       html: `
@@ -47,13 +47,13 @@ export async function GET(req: NextRequest) {
 
   if (action === 'decline') {
     await resend.emails.send({
-      from: 'bababui nails <bookings@bababuinails.com>',
+      from: 'bababui nails <onboarding@resend.dev>',
       to: client_email,
       subject: 'Your reschedule request was declined',
       html: `
         <p>Hi ${client_name},</p>
         <p>Unfortunately your reschedule request could not be accommodated.</p>
-        <p>Please DM <a href="https://www.instagram.com/bababui.nails">@bababui.nails</a> on Instagram or <a href="https://bababuinails.com/manage">visit your booking</a> to try a different time.</p>
+        <p>Please DM <a href="https://www.instagram.com/bababui.nails">@bababui.nails</a> on Instagram or <a href="https://bababui-nails-2.vercel.app/manage">visit your booking</a> to try a different time.</p>
         <p>— brooke</p>
         `,
     })
@@ -73,13 +73,13 @@ export async function GET(req: NextRequest) {
       .eq('id', id)
 
     await resend.emails.send({
-      from: 'bababui nails <bookings@bababuinails.com>',
+      from: 'bababui nails <onboarding@resend.dev>',
       to: client_email,
       subject: 'Your appointment has been cancelled',
       html: `
         <p>Hi ${client_name},</p>
         <p>Your appointment has been cancelled.</p>
-        <p>We hope to see you again soon! <a href="https://bababuinails.com/book">Book a new appointment</a> or DM <a href="https://www.instagram.com/bababui.nails">@bababui.nails</a> on Instagram.</p>
+        <p>We hope to see you again soon! <a href="https://bababui-nails-2.vercel.app/book">Book a new appointment</a> or DM <a href="https://www.instagram.com/bababui.nails">@bababui.nails</a> on Instagram.</p>
         <p>— brooke</p>
         `,
     })

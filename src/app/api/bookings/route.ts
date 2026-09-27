@@ -57,7 +57,7 @@ export async function POST(req: NextRequest) {
     console.log('booking created:', data)
 
     const emailToClient = await resend.emails.send({
-      from: 'bababui nails <bookings@bababuinails.com>',
+      from: 'bababui nails <onboarding@resend.dev>',
       to: body.client_email,
       subject: 'Your appointment is booked!',
       html: `
@@ -70,8 +70,8 @@ export async function POST(req: NextRequest) {
         <p><strong>Time:</strong> ${body.appointment_time}</p>
         <p><strong>Location:</strong> 30 Weston Green SW, Calgary AB. There is plenty of parking around the cul-de-sac. Please come in through the back door.</p>
         ${body.notes ? `<p><strong>Notes:</strong> ${body.notes}</p>` : ''}
-        <p>Please refer to my <a href="https://bababuinails.com/policy">policy page</a> before your appointment.</p>
-        <p>If you need to cancel or reschedule, visit <a href="https://bababuinails.com/manage">bababuinails.com/manage</a> with your booking ID at least 24 hours before your appointment.</p>
+        <p>Please refer to my <a href="https://bababui-nails-2.vercel.app/policy">policy page</a> before your appointment.</p>
+        <p>If you need to cancel or reschedule, visit <a href="https://bababui-nails-2.vercel.app/manage">bababuinails.com/manage</a> with your booking ID at least 24 hours before your appointment.</p>
         <p>See you soon! ✨</p>
         <p>— brooke</p>
       `,
@@ -79,7 +79,7 @@ export async function POST(req: NextRequest) {
     console.log('client email result:', emailToClient)
 
     const emailToTech = await resend.emails.send({
-      from: 'bababui nails <bookings@bababuinails.com>',
+      from: 'bababui nails <onboarding@resend.dev>',
       to: NAIL_TECH_EMAIL,
       subject: `New booking from ${body.client_name}`,
       html: `

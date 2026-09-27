@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
   const { id, action, new_date, new_time, message, client_email, client_name } = body
 
   await resend.emails.send({
-    from: 'bababui nails <bookings@bababuinails.com>',
+    from: 'bababui nails <onboarding@resend.dev>',
     to: NAIL_TECH_EMAIL,
     subject: `Booking ${action} request from ${client_name}`,
     html: `
@@ -40,18 +40,18 @@ export async function POST(req: NextRequest) {
         <p><strong>Preferred new date:</strong> ${new_date}</p>
         <p><strong>Preferred new time:</strong> ${new_time}</p>
         <p>
-          <a href="https://bababuinails.com/api/manage/respond?id=${id}&action=accept&new_date=${new_date}&new_time=${new_time}&client_email=${encodeURIComponent(client_email)}&client_name=${encodeURIComponent(client_name)}" 
+          <a href="https://bababui-nails-2.vercel.app/api/manage/respond?id=${id}&action=accept&new_date=${new_date}&new_time=${new_time}&client_email=${encodeURIComponent(client_email)}&client_name=${encodeURIComponent(client_name)}" 
             style="background:#0f3282;color:white;padding:10px 20px;text-decoration:none;border-radius:8px;margin-right:10px;">
             ✓ Accept
           </a>
-          <a href="https://bababuinails.com/api/manage/respond?id=${id}&action=decline&client_email=${encodeURIComponent(client_email)}&client_name=${encodeURIComponent(client_name)}"
+          <a href="https://bababui-nails-2.vercel.app/api/manage/respond?id=${id}&action=decline&client_email=${encodeURIComponent(client_email)}&client_name=${encodeURIComponent(client_name)}"
             style="background:#ef4444;color:white;padding:10px 20px;text-decoration:none;border-radius:8px;">
             ✗ Decline
           </a>
         </p>
       ` : `
         <p>
-          <a href="https://bababuinails.com/api/manage/respond?id=${id}&action=cancel_confirm&client_email=${encodeURIComponent(client_email)}&client_name=${encodeURIComponent(client_name)}"
+          <a href="https://bababui-nails-2.vercel.app/api/manage/respond?id=${id}&action=cancel_confirm&client_email=${encodeURIComponent(client_email)}&client_name=${encodeURIComponent(client_name)}"
             style="background:#ef4444;color:white;padding:10px 20px;text-decoration:none;border-radius:8px;">
             ✓ Confirm Cancellation
           </a>
