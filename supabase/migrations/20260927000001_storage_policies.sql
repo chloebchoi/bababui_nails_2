@@ -1,0 +1,5 @@
+create policy "Auth users can delete gallery images" on storage.objects as PERMISSIVE for DELETE to public using (((bucket_id = 'gallery-images'::text) AND (auth.role() = 'authenticated'::text)));
+create policy "Auth users can read gallery images" on storage.objects as PERMISSIVE for SELECT to public using (((bucket_id = 'gallery-images'::text) AND (auth.role() = 'authenticated'::text)));
+create policy "Auth users can upload gallery images" on storage.objects as PERMISSIVE for INSERT to public with check (((bucket_id = 'gallery-images'::text) AND (auth.role() = 'authenticated'::text)));
+create policy "Public can read gallery images" on storage.objects as PERMISSIVE for SELECT to public using ((bucket_id = 'gallery-images'::text));
+create policy "Public can upload inspo images" on storage.objects as PERMISSIVE for INSERT to public with check ((bucket_id = 'inspo-images'::text));
